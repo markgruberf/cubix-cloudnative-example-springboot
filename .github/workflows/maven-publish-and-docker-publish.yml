@@ -61,9 +61,9 @@ jobs:
     - name: 'Logging into Docker'
       run: docker login ghcr.io -u markgruberf -p ${{ github.token }}
       
-      name: 'Build the Docker image'
+    - name: 'Build the Docker image'
       run: docker build . --file Dockerfile --tag ghcr.io/markgruberf/cubix/cloudnative/demo:actions
 
-      name: 'Push Docker'
+    - name: 'Push Docker'
       run: docker push ghcr.io/markgruberf/cubix/cloudnative/demo:actions
           
