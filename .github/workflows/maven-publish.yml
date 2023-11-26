@@ -30,7 +30,7 @@ jobs:
     - name: 'check Java Version'
       run: java -version
     - name: Build with Maven
-      run: mvn -B verify --file pom.xml
+      run: mvn -B clean verify --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy 
